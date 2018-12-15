@@ -1,0 +1,35 @@
+
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Novo Usuário</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <img [src]="imagem"/>
+  <form #form="ngForm" (submit)="salvar(form)">
+
+    <ion-list>
+        <ion-item>
+            <ion-label stacked>Nome</ion-label>
+            <ion-input type="text" name="nome" ngModel></ion-input>
+        </ion-item>
+      
+        <ion-item>
+           <ion-label stacked>E-mail</ion-label>
+           <ion-input type="email" name="email" ngModel></ion-input>
+        </ion-item>
+      
+        <ion-item>
+           <ion-label stacked>Senha</ion-label>
+           <ion-input type="password" name="senha" ngModel></ion-input>
+        </ion-item>
+
+      </ion-list>
+      <button ion-button block outline type="button" (click)="foto()">Tirar foto</button>
+      <button ion-button block color="primary">Salvar</button>
+    </form>
+</ion-content>

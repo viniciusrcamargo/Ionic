@@ -1,0 +1,7 @@
+{
+  "name": "pastoralSobriedade",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

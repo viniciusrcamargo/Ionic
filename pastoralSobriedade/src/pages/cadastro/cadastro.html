@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Cadastro de Pessoas</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-input [(ngModel)]="inputText" placeholder="Nome"></ion-input>
+  <ion-input [(ngModel)]="inputText1" placeholder="Email"></ion-input>
+  <ion-input [(ngModel)]="inputText2" placeholder="Telefone"></ion-input>
+  <ion-input [(ngModel)]="inputText3" placeholder="Endereço"></ion-input>
+  <button ion-button full (click)="addPessoa({name:inputText, email:inputText1, telefone:inputText2, endereco:inputText3})" outline>Adicionar</button>
+</ion-content>

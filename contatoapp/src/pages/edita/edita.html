@@ -1,0 +1,28 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Editar</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <form #form="ngForm" (submit)="salvar(form)">
+
+    <ion-list>
+      
+      <ion-item>
+        <ion-label stacked>Nome</ion-label>
+        <ion-input type="text" name="nome" [(ngModel)]="contato.nome"></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label stacked>E-mail</ion-label>
+        <ion-input type="email" name="email" [(ngModel)]="contato.email"></ion-input>
+      </ion-item>
+
+    </ion-list>
+    <button ion-button block color="primary">Salvar</button>
+  </form>
+</ion-content>

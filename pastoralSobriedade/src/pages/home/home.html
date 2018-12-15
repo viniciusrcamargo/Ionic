@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Pessoas
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+ <ion-list>  
+  <ion-item *ngFor="let pessoa of pessoas">
+    <ion-avatar item-start>
+        <img src="/assets/imgs/user.png">
+    </ion-avatar>
+    <div>{{pessoa.name}}</div>
+    <div>{{pessoa.email}}</div>
+    <div>{{pessoa.telefone}}</div>
+    <div>{{pessoa.endereco}}</div>
+    <button ion-button (click)="editPessoa(pessoa.key)" color="secondary" outline>Editar</button>
+    <button ion-button (click)="delPessoa(pessoa.key)" color="danger" outline>Excluir</button>
+  </ion-item>
+ </ion-list>
+
+ <ion-fab right bottom>
+  <button ion-fab (click)="abrirTela()"><ion-icon name="add"></ion-icon></button>
+ </ion-fab>
+</ion-content>
